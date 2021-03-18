@@ -1,0 +1,36 @@
+<header class="fondoeditarfurgo  d-flex"> 
+<div class="col-md-4 mx-auto">
+
+    <div class="card">
+        <div class="card-body">
+            <form action="/furgos/edit/{{furgo.id_furgo}}" method="POST">
+                <div class="form-group">
+                    <input type="text" name="marca" class="form-control" placeholder="Marca" value="{{furgo.marca}}" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="modelo" class="form-control" placeholder="Modelo" value="{{furgo.modelo}}">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="matricula" class="form-control" placeholder="Matricula" value="{{furgo.matricula}}">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="kilometros" class="form-control" placeholder="Kilometros" value="{{furgo.kilometros}}">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- botón de retorno -->
+    <p></p>
+          <div class="ui buttons" onclick="history.back()" style="text-align:center">
+          <button class="btn btn"  >
+          Volver atrás 
+          </button>
+          </div>
+
+</div>
+</header>

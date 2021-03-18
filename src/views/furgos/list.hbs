@@ -1,0 +1,87 @@
+
+<header class="fondoflist d-flex">
+    
+<div id="Layer1" style="width:1700px; height:650px; overflow: scroll;"> <!-- scroll -->
+<div id="div1">
+      <div class="card text-center"> <!--titulo-->
+        <div class="card-header" >
+        <h3>Listado de Furgonetas</h3>
+        </div>
+        </div>      
+<div class="container p-4">
+    <div class="row">
+        
+        {{#each furgos}}
+        <div class="col-md-3">
+            
+            <div class="card text-center">
+                <div class="card-body">
+ 
+                    <h3  class="card-title text-uppercase" >
+                     <h5>Identificación:   {{id_furgo}}</h5> 
+                    </h3>
+                    <h3  class="card-title text-uppercase" >
+                     <h5>Marca:   {{marca}}</h5> 
+                    </h3>
+                     <h3  class="card-title text-uppercase" >
+                     <h5>Matricula:   {{matricula}}</h5> 
+                    </h3>   
+                     </h3>
+                     <h3  class="card-title text-uppercase" >
+                      </h3> 
+                    
+                    
+                      <h5>Modelo:{{ modelo}}  </h5>    
+                      <h5>Kilómetros:{{kilometros}} km </h5> 
+                      
+                      </p>
+                    <a class="btn btn-danger" href="/furgos/delete/{{id_furgo}}">
+                        Delete Link
+                    </a>
+                    <a class="btn btn-secondary" href="/furgos/edit/{{id_furgo}}">
+                        Edit
+                    </a>
+                   
+                </div>
+            
+            </div>
+        </div>
+        
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No existe un registro de furgonetas</p>
+                <a href="/furgos/add">Agrega una por favor</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    
+</div>
+        <!--boton de imprimir-->
+        <div class="col text-center">
+         <button class="btn btn-warning color-dark" onclick="printContent('div1')">IMPRIMIR</button>
+        </div> <p></p> 
+        <!-- botón de retorno -->
+        <div class="ui buttons" onclick="history.back()" style="text-align:center">
+        <button class="btn btn">
+        volver atrás 
+         </button>
+        </div>
+</div>
+</div>
+
+
+<!-- funcion imprimir -->
+<script>
+function printContent(el){
+	var restorepage = document.body.innerHTML;
+	var printcontent = document.getElementById(el).innerHTML;
+	document.body.innerHTML = printcontent;
+	window.print();
+	document.body.innerHTML = restorepage;
+    
+}
+</script>
+
+ </header>

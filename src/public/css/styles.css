@@ -1,0 +1,413 @@
+body {
+    background: #f5f6fa;
+font-family: 'Oswald', sans-serif;
+
+    overflow: hidden;
+}
+
+.index {
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar {
+    background: black !important;
+}
+
+.nav-link {
+    color: #fff !important;  
+}
+.nav-link-todavia {
+  color: rgb(15, 13, 13) !important;  
+}
+.masthead {
+    color: white;
+    min-height: 30rem;
+    width: 100%;
+    height: 100%;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-right:  5rem;
+    background: url('/img/background.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.masthead h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media (min-width: 992px) {
+    .masthead {
+      height: 100vh;
+    }
+    .masthead h1 {
+      font-size: 5.5rem;
+    }
+  }
+
+  
+.fondoadd {    /* Para listar hojas de rutas*/
+  color: rgb(17, 17, 17);
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  padding-right: 0rem;
+  background: url('/img/salpicadero.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fondoadd  h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+
+@media (min-width: 992px) {
+  .fondoadd{
+    height: 100vh;
+  }
+  .fondoadd h1 {
+    font-size: 5.5rem;
+  }
+}
+.fondocadd {   /*Fondo de hoja de ruta*/
+  color: rgb(10, 10, 10);
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  padding-right:  5rem;
+  background: url('/img/fondoConductores.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fondocadd  h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .fondocadd{
+    height: 100vh;
+  }
+  .fondocadd h1 {
+    font-size: 5.5rem;
+  }
+}
+
+.fondofadd {   /*FONDO DE FURGOS ADD*/
+  color: rgb(7, 7, 7);
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  padding-right:  5rem;
+  background: url('/img/fondogaraje.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;;
+}
+.fondofadd  h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .fondofadd{
+    height: 100vh;
+  }
+  .fondofadd h1 {
+    font-size: 5.5rem;
+  }
+}
+
+
+.fondopadd {   /*FONDO DE PROFILE ADD*/
+  color: white;
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  padding-right:  5rem;
+  background: url('/img/profile.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;;
+}
+.fondopadd  h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .fondopadd{
+    height: 100vh;
+  }
+  .fondopadd h1 {
+    font-size: 5.5rem;
+  }
+}
+
+
+.fondosubida {   /*FONDO DE SUBIDA DE ARCHIVO*/
+  color: rgb(10, 10, 10);
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  padding-right:  5rem;
+  background: url('/img/fondosubida.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;;
+}
+.fondosubida  h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .fondosubida{
+    height: 100vh;
+  }
+  .fondosubida h1 {
+    font-size: 5.5rem;
+  }
+}
+
+
+.fondodescarga {   /*FONDO DE DESCARGA DE ARCHIVO*/
+  color: rgb(10, 10, 10);
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  padding-right:  5rem;
+  background: url('/img/fondodescarga.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 140% 140%;;
+}
+.fondodescarga  h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .fondodescarga{
+    height: 100vh;
+  }
+  .fondosubida h1 {
+    font-size: 5.5rem;
+  }
+}
+
+
+
+
+.fondoflist {   /*FONDO DE LISTADO DE FURGONETAS*/
+  color: rgb(3, 3, 3);
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  padding-right:  5rem;
+  background: url('/img/fondofurgolista.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;;
+}
+.fondoflist  h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .fondoflist{
+    height: 100vh;
+  }
+  .fondoflist h1 {
+    font-size: 5.5rem;
+  }
+}
+
+.fondodetalle {   /*FONDO DETALLE*/
+  color: rgb(14, 13, 13);
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 13rem;
+  padding-bottom: 8rem;
+  padding-left:  3rem;
+  background: url('/img/fondodetalle.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;;
+}
+.fondodetalle  h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .fondodetalle{
+    height: 100vh;
+  }
+  .fondodetalle h1 {
+    font-size: 5.5rem;
+  }
+}
+
+.fondoaddusuario {   /*FONDO Usuario*/
+  color: rgb(14, 13, 13);
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+  padding-left:  3rem;
+  background: url('/img/fondousuario.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;;
+}
+.fondoaddusuario h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .fondoaddusuario{
+    height: 100vh;
+  }
+  .fondoaddusuario h1 {
+    font-size: 5.5rem;
+  }
+}
+
+.fondoeditarfurgo {   /*FONDO EDITAR FURGO*/
+  color: rgb(14, 13, 13);
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+  padding-left:  3rem;
+  background: url('/img/fondoeditarfurgo.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;;
+}
+.fondoeditarfurgo  h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .fondoeditarfurgo {
+    height: 100vh;
+  }
+  .fondoeditarfurgo  h1 {
+    font-size: 5.5rem;
+  }
+}
+
+.fondolistausuario {   /*FONDO EDITAR LISTAUSUARIO*/
+  color: rgb(14, 13, 13);
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+  padding-left:  3rem;
+  background: url('/img/fondolistausuario.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;;
+}
+.fondolistarusuario  h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .fondolistausuario {
+    height: 100vh;
+  }
+  .fondolistausuario h1 {
+    font-size: 5.5rem;
+  }
+}
+
+.fondoeditorruta {   /*FONDO EDITOR RUTA*/
+  color: rgb(255, 255, 255);
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  padding-left:  3rem;
+  background: url('/img/fondoeditorruta.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 110% 110%;;
+}
+.fondoeditorruta  h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .fondoeditorruta{
+    height: 100vh;
+  }
+  .fondoeditorruta h1 {
+    font-size: 5.5rem;
+  }
+}
+
+
+.fondosignin{   /*FONDO SIGNIN*/
+  color: rgb(14, 14, 14);
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  padding-left:  3rem;
+  background: url('/img/fondosignin.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 110% 110%;;
+}
+.fondosignin  h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .fondosignin{
+    height: 100vh;
+  }
+  .fondosignin h1 {
+    font-size: 5.5rem;
+  }
+}
+

@@ -1,0 +1,83 @@
+
+<header class="fondocadd d-flex"> 
+      
+<div class="container p-4">
+    
+    <div class="row">
+        
+        <div class="col-md-4 mx-auto">
+        <div class="card text-center"> <!--titulo-->
+        <div class="card-header" >
+        <h3>Agregar Hoja de ruta</h3>
+        </div>
+        </div>                        <!--fin del titulo-->
+            <div class="card">
+                <div class="card-body">
+                    <form action="/rutas/add" method="POST">
+                
+                     <!-- CALENDARIO  , FALTA PONERLO EN BASE DE DATOS-->
+                    <div>
+                    <label for="start">Fecha:</label>
+                    <input type="date" id="start" name="fecha" 
+                     value="2020-12-01"
+                         min="2020-01-01" max="2030-12-31">
+                     <!--  DESPLEGABLE-->
+                    </div>
+                    <div class="form-group">
+                          <input type="int" name="id_furgo" class="form-control" placeholder="Identificación de la furgoneta"> 
+                    </div>
+                    <div class="form-group">
+                          <input type="text" name="origen" class="form-control" placeholder="Inicio de la ruta"> 
+                    </div>
+                    <div class="form-group">
+                          <input type="text" name="destino" class="form-control" placeholder="Final de la ruta"> 
+                    </div>                  
+                    <div class="form-group">
+                          <input type="int" name="kilometros" class="form-control" placeholder="Total kilometros"> 
+                    </div>                 
+                    <select  name="dietas">
+                             <option selected value="0"> DIETAS </option>
+                             <option value="1">SI</option>
+                             <option value="0">NO</option></select>
+                    </select>
+                       </div>                 
+                    <select  name="festivo">
+                             <option selected value="0"> FESTIVOS </option>
+                             <option value="1">SI</option>
+                             <option value="0">NO</option></select>
+                    </select>                    
+                     
+                    <div class="form-group">
+                         <textarea name="incidencias" rows="2" class="form-control" placeholder="Incidencias" input type="time"></textarea>
+                    </div> 
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Guardar
+                            </button>
+                        </div>
+                     </form>
+       </div>
+        </div>
+        </div>
+        </form>
+
+            <!-- botón de retorno -->
+            <p></p>
+            <div class="ui buttons" onclick="history.back()" style="text-align:center">
+            <button class="btn btn"  >
+          volver atrás 
+          </button>
+            </div>
+                </div>
+               
+            
+        </div>
+  
+          </div>
+    </div>
+
+</div>
+
+
+</header>
+ 

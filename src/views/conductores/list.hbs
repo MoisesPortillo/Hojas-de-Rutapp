@@ -1,0 +1,66 @@
+<header class="fondolistausuario d-flex"> 
+    <div id="Layer1" style="width:2000px; height:650px; overflow: scroll;">
+        <div id="div1">
+<div class="container p-4">
+    <div class="row">
+        {{#each usuarios}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    
+                    <h3  class="card-title text-uppercase" >
+                     <h5>Nombre:   {{nombre}}</h5> 
+                    </h3>
+                     <h3  class="card-title text-uppercase" >
+                     <h5>Apellidos:   {{apellidos}}</h5> 
+                    </h3>         
+                    
+    
+                    <p class="m-2">{{usuario}}</p>
+                    <p class="text-muted">
+                      <h5>Rol: {{rol}}
+                   </h5> </p>
+                    <a class="btn btn-danger" href="/conductores/delete/{{id_usuario}}">
+                        Borrar usuario
+                    </a>
+                   <!-- <a class="btn btn-secondary" href="/conductores/edit/{{id_usuario}}">
+                        Editar-->
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay usuarios</p>
+                <a href="/conductores/add">Agregar usuario</a>
+            </div>
+           
+        {{/each}}
+       
+    </div>
+</div>
+</div>
+   <!--boton de imprimir-->
+        <div class="col text-center">
+         <button class="btn btn-warning color-dark" onclick="printContent('div1')">IMPRIMIR</button>
+        </div> <p></p> 
+        <!-- botón de retorno -->
+        <div class="ui buttons" onclick="history.back()" style="text-align:center">
+        <button class="btn btn">
+        Volver atrás 
+         </button>
+        </div>
+        </div>
+        </div>
+</header>
+<script>
+function printContent(el){
+	var restorepage = document.body.innerHTML;
+	var printcontent = document.getElementById(el).innerHTML;
+	document.body.innerHTML = printcontent;
+	window.print();
+	document.body.innerHTML = restorepage;
+    
+}
+</script>

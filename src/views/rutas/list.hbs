@@ -1,0 +1,78 @@
+<header class="fondoadd d-flex"> 
+    <div id="Layer1" style="width:2000px; height:650px; overflow: scroll;"> <!-- scroll -->
+<div class="container p-4" >
+     <div class="card text-center">
+    <div class="card-header" >
+          <h3>Listado de Hojas de Ruta</h3>
+         
+        </div>
+        </div>
+    <div class="row" >
+        {{#each lrutas}}
+        <div class="col-md-6" >
+            <div class="card text-center"  >
+                <div class="card-body" >
+                  
+                        <h3  class="card-title text-uppercase" >
+                        <h5>Origen:   {{origen}}</h5> 
+                        <h5>Destino:  {{destino}}</h5> 
+                        <h5>kilometros: {{kilometros}} </h5> 
+                        <h5>Incidencias:  {{incidencias}}</h5> 
+
+
+                      <h5> {{#if dietas}}
+ 	                    <p class="m-2">Dietas: SI</p>
+                        {{else}}
+	                    <p class="m-2">Dietas: NO</p>
+                     {{/if}}</h5> 
+
+                    <h5> {{#if festivo}}
+ 	                    <p class="m-2">Festivo: SI</p>
+                        {{else}}
+	                    <p class="m-2">Festivo: NO</p>
+                     {{/if}}</h5> 
+                     
+                       
+                        </h3>
+                    
+                    <p class="m-2">{{description}}</p>
+                    <p class="text-muted">
+                      <h5>Desde: {{timeago created_at}}
+                   </h5> </p>
+                    <a class="btn btn-danger" href="/rutas/delete/{{id_ruta}}">
+                       Eliminar
+                    </a>
+                    <a class="btn btn-secondary" href="/rutas/edit/{{id_ruta}}">
+                        Editar
+                    </a>
+                     <a class="btn btn-success" href="/rutas/detalle/{{id_ruta}}">
+                        Detalle 
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+        {{else}}
+        
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay ninguna hoja de ruta</p>
+                <a href="/rutas/add">¡Crea una!</a>
+            </div>
+              
+        </div>
+        {{/each}}
+
+        
+    </div>
+      <!-- botón de retorno -->
+        <p></p> <div class="ui buttons" onclick="history.back()" style="text-align:center">
+         <button class="btn btn-warning dark"  >
+          Volver atrás 
+          </button>
+          </div>
+</div>
+
+     </div> 
+
+</header>

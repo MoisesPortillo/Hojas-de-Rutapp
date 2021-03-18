@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- dark, light-->
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <i class="fas fa-people-carry"></i></i> Hojas de RutApp <i class="fas fa-truck"></i>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto"> 
+    {{#if user}}
+<!--  Hay usuario logueado -->  
+          {{#if user.rol}}
+<!--  Es administrador -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+         <i class="fas fa-users-cog"></i> Zona Admin
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/conductores/add">Agregar usuarios</a>
+             <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/conductores">Consultar usuarios</a>
+             <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/furgos">Consultas </a>
+              <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/furgos/add">Agregar documentación</a>
+              <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/subida/add">Subir ficheros</a>
+          </div>
+        </li>
+        {{else}}
+<!--  Es conductor -->       
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-book"></i> Conductores
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/rutas">Ver Hojas de Ruta</a>
+              <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/rutas/add">Agregar hoja de ruta</a>
+          
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/descarga/add">Documentos</a>
+            </div>
+            </div>
+          </li>
+        {{/if}} 
+<!--  Botones comunes para administrador y conductor-->
+        <li class="nav-item">
+          <a class="nav-link" href="/profile"> Perfil <i class="fas fa-user-circle"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout <i class="fas fa-power-off"></i></a>
+    {{else}}
+<!--  No hay usuario logueado. A login -->
+        <li class="nav-item">
+          <a class="nav-link" href="/signin">Iniciar Sesión</a>
+        </li>
+       <!--<li class="nav-item">
+          <a class="nav-link" href="/signup">Registrate</a>
+        </li>-->
+       
+    {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

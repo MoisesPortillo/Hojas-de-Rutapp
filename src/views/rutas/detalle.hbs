@@ -1,0 +1,71 @@
+<header class="fondodetalle d-flex"> 
+    
+<div class="container p-2">
+    <div class="row">
+  
+        {{#each list_hr}}
+ 
+        <div class="col-md-33 mx-auto">
+            <div class="card text-left">
+                <div class="card-body" >
+                  <div id="div1">
+                    <h3  class="card-title text-uppercase"  >
+                        
+                    <h4>Origen:   {{origen}}</h4> 
+                    <h4>Destino:   {{destino}}</h4>
+                    </h3>
+                  <p class="m-2">Fecha: {{fecha}}</p>
+                    <p class="m-2">Conductor: {{nombre}}</p>
+                    <p class="m-2">Matricula de la Furgo: {{matricula}}</p>
+                    <p class="m-2">Marca: {{marca}}</p>
+                    <p class="m-2">Modelo: {{modelo}}</p>
+                    <p class="m-2">Kilometros: {{kilometros}}</p> 
+                    <p class="m-2">Incidencias: {{incidencias}}</p>              
+
+                </div>
+            </div>
+        </div>
+          <!--boton de imprimir-->
+        <div class="col text-center">
+            <p></p> 
+         <button class="btn btn-warning color-dark" onclick="printContent('div1')">IMPRIMIR</button>
+        </div> 
+
+        <p></p> 
+        <!-- botón de retorno -->
+          <div class="ui buttons" onclick="history.back()" style="text-align:center">
+          <button class="btn btn"  >
+          Volver atrás 
+          </button>
+          </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>There are not furgonetas saved yet.</p>
+                <a href="/furgos/add">Create One!</a>
+                
+            </div>
+        </div>
+        
+        {{/each}}
+    </div>
+  
+</div>
+
+ 
+          
+ </div>       
+
+</header>
+
+
+<script>
+function printContent(el){
+	var restorepage = document.body.innerHTML;
+	var printcontent = document.getElementById(el).innerHTML;
+	document.body.innerHTML = printcontent;
+	window.print();
+	document.body.innerHTML = restorepage;
+    
+}
+</script>

@@ -1,0 +1,58 @@
+<header class="fondopadd d-xl-flex"> 
+<div class="container p-6" >
+    <div class="row">
+        <div class="col-md-4 mx-auto" style="background-color:#b66d29">
+            <div class="card text-center" style="background-color:#dba675">
+                <div class="card-body" style="color:#0c0c0c">
+                    <h3>Bienvenido {{user.nombre}}  {{user.apellidos}}</h3>
+                    <h4>Usuario: {{user.usuario}}</h4>
+
+         {{#if user.rol}}
+                    <h4>Rol: Administrador</h4>     
+                    <a href="/furgos/add" class="btn btn-dark m-4">
+                        Agregar furgonetas  
+                    </a>
+                    <a href="/furgos" class="btn btn-dark m-4">
+                        Listar furgonetas  
+                    </a>
+                    <a href="/conductores/add" class="btn btn-dark m-4">
+                        Agregar Usuarios 
+                    </a>
+                     <a href="/conductores/" class="btn btn-dark m-4">
+                        Gestion de usuarios
+                    </a>    
+                     <a href="/subida/add" class="btn btn-dark m-4">
+                        Documentación
+                    </a>     
+                <!--    <input type="button" onclick="history.back()" name="volver atrás" value="volver atrás">   -->     
+<div class="ui buttons" onclick="history.back()">
+  <button class="ui labeled icon button active" "left chevron icon" >
+    Volver atrás 
+  </button>
+ </div>
+
+        {{else}}
+                    <h4>Rol: Conductor</h4>     
+                    <a href="/rutas/add" class="btn btn-dark m-4">
+                        Crear una Hoja de Ruta nueva  
+                    </a>
+                    <a href="/rutas" class="btn btn-dark m-4">
+                        Ver Hojas de Rutas almacenadas  
+                    </a>
+                    <a href="/descarga/add" class="btn btn-dark m-4">
+                       Documentos
+                    </a>     
+                    <div class="ui buttons" onclick="history.back()">
+                    <button class="ui labeled icon button active" "left chevron icon" >
+                     Volver atrás 
+                    </button>
+                    </div
+        {{/if}}
+
+                </div>
+            </div>
+        </div>
+
+   
+</div>
+</header>
