@@ -1,5 +1,5 @@
 # Hojas de Rutapp
-![](logo/logofurgo.jpg)  
+![](logo/logofurgo.JPG)  
 ## Acerda de
 - Idea y desarrollo a cargo de Moisés P.G para el TFE de la Universidad Internacional de la Rioja.
 - El nombre de la app web es Hojas de Rutapp en su versión 1.0
