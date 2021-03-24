@@ -57,7 +57,7 @@ router.post('/edit/:id_furgo', async (req, res) => {
     };
     await pool.query('UPDATE furgonetas set ? WHERE id_furgo = ?', [newFurgo, id_furgo]);
     console.log(newFurgo);
-    req.flash('success', 'Furgonetas Updated Successfully');
+    req.flash('success', '¡Furgonetas dada de alta correctamente!');
     res.redirect('/furgos');
 });
 
