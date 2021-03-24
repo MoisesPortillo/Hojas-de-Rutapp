@@ -36,7 +36,7 @@ const {  } = req.body;
 
 
     await pool.query('INSERT INTO rutas set ?', [newLink]);
-    req.flash('success', 'Link Saved Successfully');
+    req.flash('success', '¡Alta correcta!');
     res.redirect('/conductores');
 });
 
