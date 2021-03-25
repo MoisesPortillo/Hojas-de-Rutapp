@@ -27,7 +27,7 @@ router.post('/add', async (req, res) => {
 });
 
 router.get('/', isLoggedIn, async (req, res) => {
-  /* const lrutas = await pool.query('SELECT id_ruta,date_format(rutas.fecha,"%d %m %Y") AS fecha,origen,destino,dietas,created_at FROM rutas WHERE id_usuario = ?', [req.user.id_usuario]);*/
+
    const lrutas = await pool.query('SELECT id_ruta,date_format(rutas.fecha,"%d %m %Y") AS fecha,origen,destino,dietas,kilometros,incidencias,created_at FROM rutas WHERE id_usuario = ?', [req.user.id_usuario]);
     console.log(lrutas);
     res.render('rutas/list', { lrutas });
@@ -48,14 +48,7 @@ router.get('/edit/:id', async (req, res) => {
     res.render('rutas/edit', {ruta: rutas[0]});
 });
 
-/*router.get('/edit/:id', async (req, res) => {
-    const { id } = req.params;
-//    console.log(id);
-//    const rutas = await pool.query('SELECT * FROM rutas WHERE id_ruta = ?', [id]);
-    const rutas = await pool.query('SELECT id_ruta,DATE_FORMAT(rutas.fecha,GET_FORMAT(DATE,"EUR")) AS fecha,id_furgo,origen,destino,dietas,festivo,kilometros,incidencias,created_at FROM rutas WHERE id_ruta = ?', [id]);
-   console.log(rutas);
-    res.render('rutas/edit', {ruta: rutas[0]});
-});*/
+
 
 router.post('/edit/:id', async (req, res) => {
     const { id } = req.params;
@@ -70,20 +63,29 @@ router.post('/edit/:id', async (req, res) => {
         kilometros,
         incidencias
     };
+       console.log(editRuta);
+    if (editRuta.dietas == "SI")
+        {editRuta.dietas = true}
+        else
+        {editRuta.dietas = false};
+    if (editRuta.festivo == "SI")
+        {editRuta.festivo = true}
+        else
+        {editRuta.festivo = false}; 
+    
     await pool.query('UPDATE rutas set ? WHERE id_ruta = ?', [editRuta, id]);
     req.flash('success', 'Ruta correctamente actualizada');
     res.redirect('/rutas');
-});
+    });
 
-router.get('/detalle/:id', async (req, res) => {
+    router.get('/detalle/:id', async (req, res) => {
 
     const {id} = req.params
    const list_hr = await pool.query('SELECT rutas.origen,rutas.destino,date_format(rutas.fecha,"%d %m %Y") AS fecha, usuarios.nombre,furgonetas.matricula,furgonetas.marca,furgonetas.modelo,rutas.kilometros,rutas.incidencias FROM rutas,usuarios,furgonetas WHERE rutas.id_ruta=? and usuarios.id_usuario=rutas.id_usuario and furgonetas.id_furgo=rutas.id_furgo;', [id]);
-   /*  const list_hr = await pool.query('SELECT rutas.origen,rutas.destino,date_format(rutas.fecha,"%d %m %Y") AS fecha, usuarios.nombre,furgonetas.matricula,furgonetas.marca,furgonetas.modelo,rutas.kilometros,rutas.incidencias FROM rutas,usuarios,furgonetas WHERE rutas.id_ruta=? and usuarios.id_usuario=rutas.id_usuario and furgonetas.id_furgo=rutas.id_furgo;', [id]);*/
     console.log (list_hr)
 
     res.render('rutas/detalle', {list_hr});
-//   res.send("Hola Prueba") 
+
 });
 
 module.exports = router;
