@@ -28,7 +28,7 @@ router.post('/add', async (req, res) => {
 
 router.get('/', isLoggedIn, async (req, res) => {
 
-   const lrutas = await pool.query('SELECT id_ruta,date_format(rutas.fecha,"%d %m %Y") AS fecha,origen,destino,dietas,kilometros,incidencias,created_at FROM rutas WHERE id_usuario = ?', [req.user.id_usuario]);
+   const lrutas = await pool.query('SELECT id_ruta,date_format(rutas.fecha,"%d %m %Y") AS fecha,origen,destino,dietas,festivos,kilometros,incidencias,created_at FROM rutas WHERE id_usuario = ?', [req.user.id_usuario]);
     console.log(lrutas);
     res.render('rutas/list', { lrutas });
 });
