@@ -14,11 +14,7 @@
                 </div> 
 
 
-               <!-- FECHA NUEVa
-                <div class="form-group">
-                <input type="text" name="fecha" class="form-control" placeholder="Fecha" value="{{ruta.fecha}}" autofocus>
-               </div>
-                fin FECHA NUEVa-->
+       
                 
                 <div class="form-group">
                     <input type="int" name="id_furgo" class="form-control" placeholder="Furgoneta" value="{{ruta.id_furgo}}">
@@ -29,13 +25,21 @@
                 <div class="form-group">
                     <input type="text" name="destino" class="form-control" placeholder="Destino" value="{{ruta.destino}}">
                 </div>
+               {{#if ruta.dietas}}
                 <div class="form-group">
-                    <input type="boolean" name="dietas" class="form-control" placeholder="Dietas" value="{{ruta.dietas}}">
+                    <input type="text" name="dietas" class="form-control" placeholder="Dietas" value="SI">
+                {{else}}
+                <div class="form-group">
+                    <input type="text" name="dietas" class="form-control" placeholder="Dietas" value="NO">
+                {{/if}}
+
                 </div>
+                {{#if ruta.festivo}}
                 <div class="form-group">
-                    <input type="boolean" name="festivo" class="form-control" placeholder="Festivo" value="{{ruta.festivo}}">
-                </div>
+                    <input type="text" name="festivo" class="form-control" placeholder="Festivo" value="SI">
+                {{else}}
                 <div class="form-group">
+                
                     <input type="int" name="kilometros" class="form-control" placeholder="Kilometros" value="{{ruta.kilometros}}">
                 </div>
                 <div class="form-group">
